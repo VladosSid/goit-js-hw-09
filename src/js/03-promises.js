@@ -23,7 +23,7 @@ refs.btnSub.addEventListener('click', ev => {
 });
 
 function startPromise(AMOUNT) {
-  DELAY = Number(refs.inpDelay.value);
+  let DELAY = Number(refs.inpDelay.value);
 
   data.counterInterval = setTimeout(() => {
     createPromise(data.position, DELAY
@@ -57,8 +57,6 @@ function startPromise(AMOUNT) {
       } else {
         clearInterval(data.counterInterval);
         data.position = 1;
-        
-        console.log(data)
       }
     }, DELAY);
   }, DELAY);
